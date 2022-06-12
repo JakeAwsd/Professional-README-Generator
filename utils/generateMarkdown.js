@@ -39,9 +39,12 @@ function generateMarkdown(data) {
     If your README is long, add a table of contents to make it easy for users to find what they need.
     
     - [Installation](#installation)
-    - [Usage](#usage)
+    - [Usage information](#usage)
     - [Credits](#credits)
-    - [License](#license)`,
+    - [License](#license)
+    - [Description](#Description)    
+    
+    `,
 
     installation: `
     What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
@@ -69,24 +72,24 @@ function generateMarkdown(data) {
   return `
   # Project title: ${data.title}
 
-  ## Description
+  ### Description
 
   ${addons.tableofcontents}
 
-  ## Installation instructions
+  ### Installation instructions
 
   ${addons.installation} 
   
-  ## Usage information
+  ### Usage information
   
   ${addons.usage}
 
   ${renderLicenseSection(data.license)}
 
-  ## Credits
+  ### Credits
   ${addons.credits}
   
-  ## Tests
+  ### Tests
   ${addons.tests}
 
 `
